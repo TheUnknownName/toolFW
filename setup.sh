@@ -43,11 +43,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
         sleep 1
         echo -e ${BLUE}">> Updating apt repos..."${NORMAL}
         sleep 1
-	    sudo apt -y update || abort "Setup Failed!"
+	    apt -y update || abort "Setup Failed!"
 	    sleep 1
 	    echo -e ${BLUE}">> Installing Required Packages..."${NORMAL}
 	    sleep 1
-        sudo apt install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
+        apt install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
 
     elif [[ "$(command -v dnf)" != "" ]]; then
 
