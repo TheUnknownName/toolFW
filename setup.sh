@@ -48,7 +48,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	    echo -e ${BLUE}">> Installing Required Packages..."${NORMAL}
 	    sleep 1
 	    apt install apt-utils
-        apt install -y unace make build-essential libncurses-dev bison flex libssl-dev libelf-dev openssl bc curl unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
+        apt install -y git make bc bison openssl \
+
+    curl zip kmod cpio flex libelf-dev libssl-dev libtfm-dev wget \
+
+    device-tree-compiler ca-certificates python3 python2 xz-utils unace make build-essential libncurses-dev bison flex libssl-dev libelf-dev openssl bc curl unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
 
     elif [[ "$(command -v dnf)" != "" ]]; then
 
