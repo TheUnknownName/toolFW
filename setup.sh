@@ -47,7 +47,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	    sleep 1
 	    echo -e ${BLUE}">> Installing Required Packages..."${NORMAL}
 	    sleep 1
-        apt install -y unace openssl bc curl unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
+        apt install -y unace make build-essential libncurses-dev bison flex libssl-dev libelf-dev openssl bc curl unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract device-tree-compiler liblzma-dev python3-pip brotli liblz4-tool axel gawk aria2 detox cpio rename liblz4-dev jq || abort "Setup Failed!"
 
     elif [[ "$(command -v dnf)" != "" ]]; then
 
